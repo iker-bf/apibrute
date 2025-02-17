@@ -100,7 +100,7 @@ def banner():
     print()
     print(f"Selecciona el metodo de autenticacion:")
     print()
-    print(f"1) Basic Auth (se require usuario)")
+    print(f"1) Basic Auth (se requiere usuario)")
     print(f"2) Bearer Token")
     print(f"3) API Key en header")
     print(f"4) API Key en URL")
