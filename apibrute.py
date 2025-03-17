@@ -6,8 +6,7 @@ if len(sys.argv) < 2:
     if sys.version_info >= (3,0):
         pyversion = "python3"
 
-pyversion = "python"
-
+    pyversion = "python"
     print(f"\033[32m[>]\033[0m Uso correcto: {pyversion} {sys.argv[0]} \033[34mapi_url diccionario\033[0m")
     exit()
 
