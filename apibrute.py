@@ -27,7 +27,9 @@ def basic_auth():
                         respuesta = subprocess.check_output(["curl","-s","-o","/dev/null","-w", "%{http_code}","-u", f"username:password",api_url],text=True).strip()
                         print(f"Respuesta HTTP: \033[33m{respuesta}\033[0m")
                         if respuesta == "200":
+                            subprocess.Popen(['clear'])
                             print(f"Contraseña encontrada: {password}")
+                            exit()
 
             except subprocess.CalledProcessError:
                 pass
@@ -48,8 +50,9 @@ def bearer_auth():
                         respuesta = subprocess.check_output(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-H", f"Authorization: Bearer {password}", api_url], text=True).strip()
                         print(f"Respuesta HTTP: \033[33m{respuesta}\033[0m")
                         if respuesta == "200":
+                            subprocess.Popen(['clear'])
                             print(f"Contraseña encontrada: {password}")
-                            break
+                            exit()
             except subprocess.CalledProcessError:
                  pass
     except KeyboardInterrupt:
@@ -68,8 +71,9 @@ def api_key_header_auth():
                         respuesta = subprocess.check_output(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-H", f"x-api-key: {password}", api_url])
                         print(f"Respuesta HTTP: \033[33m{respuesta}\033[0m")
                         if respuesta == "200":
+                            subprocess.Popen(['clear'])
                             print(f"Contraseña encontrada: {password}")
-                            break
+                            exit()
             except subprocess.CalledProcessError:
                  pass
     except KeyboardInterrupt:
@@ -88,8 +92,9 @@ def api_key_url_auth():
                         respuesta = subprocess.check_output(["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", f"{api_url}?api_key={password}"])
                         print(f"Respuesta HTTP: \033[33m{respuesta}\033[0m")
                         if respuesta == "200":
+                            subprocess.Popen(['clear'])
                             print(f"Contraseña encontrada: {password}")
-                            break
+                            exit()
             except subprocess.CalledProcessError:
                  pass
     except KeyboardInterrupt:
