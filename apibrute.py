@@ -5,10 +5,12 @@ import subprocess
 if len(sys.argv) < 2:
     if sys.version_info >= (3,0):
         pyversion = "python3"
+        print(f"\033[32m[>]\033[0m Uso correcto: {pyversion} {sys.argv[0]} \033[34mapi_url diccionario\033[0m")
+        exit()
     else:
         pyversion = "python"
-print(f"\033[32m[>]\033[0m Uso correcto: {pyversion} {sys.argv[0]} \033[34mapi_url diccionario\033[0m")
-exit()
+        print(f"\033[32m[>]\033[0m Uso correcto: {pyversion} {sys.argv[0]} \033[34mapi_url diccionario\033[0m")
+        exit()
 
 api_url = format(sys.argv[1])
 diccionario = format(sys.argv[2])
