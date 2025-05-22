@@ -100,12 +100,13 @@ def api_key_url_auth():
 
 def banner():
     print()
-    print(f"Selecciona el metodo de autenticacion:")
+    print("Selecciona el metodo de autenticacion:")
     print()
-    print(f"1) Basic Auth (se requiere usuario)")
-    print(f"2) Bearer Token")
-    print(f"3) API Key en header")
-    print(f"4) API Key en URL")
+    print("1) Basic Auth (se requiere usuario)")
+    print("2) Bearer Token")
+    print("3) API Key en header")
+    print("4) API Key en URL")
+    print()
     print(f"\033[32m   Created By Iker.B\033[0m")
     print(f"\033[33mhttps://github.com/iker-bf \033[0m")
     print()
