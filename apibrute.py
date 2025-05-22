@@ -106,6 +106,8 @@ def banner():
     print(f"2) Bearer Token")
     print(f"3) API Key en header")
     print(f"4) API Key en URL")
+    print(f"\033[32m   Created By Iker.B\033[0m")
+    print(f"\033[33mhttps://github.com/iker-bf \033[0m")
     print()
 
 banner()
